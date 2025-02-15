@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Login Type</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #f7e8ff;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            margin-top: 50px;
+        }
+        h2 {
+            color: #ff66b2;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px;
+        }
+        a {
+            display: inline-block;
+            font-size: 18px;
+            text-decoration: none;
+            color: white;
+            background: #ff66b2;
+            padding: 10px 20px;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+        a:hover {
+            background: #ff3385;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Select Your Login Method</h2>
+        <ul>
+            <li><a href="{% url 'blind_login' %}">Blind Student (Voice Login)</a></li>
+            <li><a href="{% url 'mute_login' %}">Mute Student (Secret Code Login)</a></li>
+            <li><a href="{% url 'regular_login' %}">Deaf & Physically Disabled (Username & Password Login)</a></li>
+        </ul>
+    </div>
+</body>
+</html>
