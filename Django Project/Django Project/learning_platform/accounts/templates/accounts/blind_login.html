@@ -1,0 +1,97 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Blind Student Login</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #ffebcc;
+            text-align: center;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            margin-top: 50px;
+        }
+        button {
+            font-size: 18px;
+            color: white;
+            background: #ff9933;
+            padding: 10px 20px;
+            border-radius: 20px;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #ff6600;
+        }
+        p {
+            color: red;
+        }
+    </style>
+
+    <script>
+        function playBeep() {
+            const beep = new Audio("{% static 'accounts/beep-01a.wav' %}"); // Load from static folder
+            beep.play();
+            beep.onended = startListening; // Start listening after beep finishes
+        }
+
+        function startListening() {
+            if (!('webkitSpeechRecognition' in window)) {
+                alert("Your browser does not support speech recognition.");
+                return;
+            }
+            
+            const recognition = new webkitSpeechRecognition();
+            recognition.continuous = false;
+            recognition.interimResults = false;
+            recognition.lang = "en-US";
+
+            recognition.onresult = function(event) {
+                let speechResult = event.results[0][0].transcript;
+                document.getElementById("passwordField").value = speechResult; // Set input field value
+                document.getElementById("loginForm").submit(); // Auto-submit form
+            };
+
+            recognition.onerror = function(event) {
+                alert("Speech recognition error: " + event.error);
+            };
+
+            recognition.start();
+        }
+
+        window.onload = function() {
+            const synth = window.speechSynthesis;
+            const utterance = new SpeechSynthesisUtterance("After the beep, say your password.");
+            synth.speak(utterance);
+
+            utterance.onend = function() {
+                setTimeout(playBeep, 500); // Play beep after speech ends
+            };
+        };
+    </script>
+
+</head>
+<body>
+    <div class="container">
+        <h2>Blind Student Login</h2>
+        <form method="post" id="loginForm">
+            {% csrf_token %}
+            <input type="hidden" id="passwordField" name="password">  <!-- Hidden field for voice input -->
+            <button type="button" id="speakButton" onclick="startListening()">Speak Password</button>
+        </form>
+        {% if messages %}
+            {% for message in messages %}
+                <p>{{ message }}</p>
+            {% endfor %}
+        {% endif %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            font-family: 'Comic Sans MS', sans-serif;
+            background-color: #f4faff;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            background-color: #ffcc00;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .profile {
+            margin: 20px;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .profile img {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .module {
+            width: 200px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+
+        .module:hover {
+            background-color: #ffcc00;
+            cursor: pointer;
+        }
+
+        .icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            background-color: #ffcc00;
+            color: #333;
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">🎓 Welcome, Alice!</div>
+
+    <div class="main-content">
+        <div class="profile">
+            <img src="https://static.sadhguru.org/d/46272/1635531387-1635531386358.jpg" alt="Profile Picture">
+            <p><strong>Name:</strong> Alice</p>
+            <p><strong>Email:</strong> alice@gmail.com</p>
+        </div>
+
+        <div class="container">
+            <div class="module" onclick="window.location.href='/accounts/learn/'">🎮<br/>Play & Learn</div>
+            <div class="module">📊<br/>Progress Report</div>
+            <div class="module">👨‍👩‍👧<br/>Parent/Teacher Access</div>
+            <div class="module">🔔<br/>Daily Challenge</div>
+            <div class="module">🧩<br/>Adaptive Learning</div>
+        </div>
+    </div>
+
+    <div class="footer">© 2025 Next-Gen Digital Education</div>
+
+</body>
+</html>

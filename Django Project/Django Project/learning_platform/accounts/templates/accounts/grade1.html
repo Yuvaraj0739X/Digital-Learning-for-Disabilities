@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade 1 - Learning Page</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #f4faff;
+            text-align: center;
+        }
+        .header {
+            background-color: #ffcc00;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+        .learning-box {
+            width: 180px;
+            height: 180px;
+            background: #ffcc00;
+            color: #333;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+            margin: 15px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: bold;
+            flex-direction: column;
+        }
+        .learning-box:hover {
+            background: #ff9900;
+            color: white;
+        }
+        .emoji {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+        .back-button {
+            margin-top: 30px;
+            background: #ffcc00;
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
+            border: none;
+            transition: 0.3s;
+        }
+        .back-button:hover {
+            background: #ff9900;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">📖 Grade 1 - Learning Topics</div>
+
+    <div class="container">
+        <div class="learning-box" onclick="window.location.href='/accounts/learn/grade1/alphabets/'">
+            <div class="emoji">🔠</div> Alphabets
+        </div>
+        <div class="learning-box" onclick="window.location.href='/accounts/learn/grade1/numbers/'">
+            <div class="emoji">🔢</div> Numbers
+        </div>
+        <div class="learning-box" onclick="window.location.href='/accounts/learn/grade1/shapes/'">
+            <div class="emoji">🔺</div> Shapes
+        </div>
+    </div>
+
+    <button class="back-button" onclick="window.location.href='/accounts/learn/'">🔙 Back to Grades</button>
+
+</body>
+</html>
