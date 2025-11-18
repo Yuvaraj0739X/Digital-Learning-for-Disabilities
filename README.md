@@ -74,10 +74,10 @@ python manage.py runserver
 
 ---
 
-## **📸 Screenshots**  
-![](https://github.com/Abishekkhanna/Digital-Learning-for-Disabilities/blob/main/Screenshot%20(104).png)  
-![](https://github.com/Abishekkhanna/Digital-Learning-for-Disabilities/blob/main/Screenshot%20(105).png)  
-![](https://github.com/Abishekkhanna/Digital-Learning-for-Disabilities/blob/main/Screenshot%20(106).png)  
+## **📸 Screenshots**
+![](https://github.com/Yuvaraj0739X/Digital-Learning-for-Disabilities/blob/main/Screenshot%20(104).png)
+![](https://github.com/Yuvaraj0739X/Digital-Learning-for-Disabilities/blob/main/Screenshot%20(105).png)
+![](https://github.com/Yuvaraj0739X/Digital-Learning-for-Disabilities/blob/main/Screenshot%20(106).png)
 
 ---
 
