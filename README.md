@@ -2,9 +2,9 @@
 
 🚀 **Project Developed for the Hackathon at MKCE Karur!**   
 👨‍💻 **Team Members:**  
-- **Abishek Khanna M S (Myself)**  
-- **Mathew Joshwa**  
-- **Yuvaraj**  
+- **Yuvaraj R (Myself)**
+- **Abishek Khanna**  
+- **Mathew Joshwa**    
 - **Roobis**  
 
 ---
